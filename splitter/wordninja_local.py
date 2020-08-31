@@ -26,22 +26,38 @@ __version__ = '2.0.0'
 
 
 class LanguageModel(object):
-  def xxx__init__(self):
+  def __init__(self):
     # Build a cost dictionary, assuming Zipf's law and cost = -math.log(probability).
     with gzip.open('/Users/alex.rosen/personal/projects/misc/splitter/wordninja_words.txt.gz') as f:
       words = f.read().decode().split()
     self._wordcost = dict((k, log((i+1)*log(len(words)))) for i,k in enumerate(words))
     self._maxword = max(len(x) for x in words)
    
-  def __init__(self):
-      with open('/Users/alex.rosen/personal/projects/misc/splitter/SUBTLEXus74286wordstextversion.txt') as f:
-        wordlines = f.read().splitlines()
-      wordlines = wordlines[1:]
-      self._wordcost = {}
-      for line in wordlines:
-        parts = line.split()
-        self._wordcost[parts[0]] = float(parts[6])
-      self._maxword = max(len(x) for x in self._wordcost.keys())
+  def xxx__init__(self):
+    # main dict
+    with open('/Users/alex.rosen/personal/projects/misc/splitter/SUBTLEXus74286wordstextversion.txt') as f:
+      wordlines = f.read().splitlines()
+    wordlines = wordlines[1:]
+    self._wordcost = {}
+    for line in wordlines:
+      parts = line.split()
+      self._wordcost[parts[0]] = 7 - float(parts[6])
+    self._maxword = max(len(x) for x in self._wordcost.keys())
+
+    # backstop dict
+    with gzip.open('/Users/alex.rosen/personal/projects/misc/splitter/wordninja_words.txt.gz') as f:
+      words = f.read().decode().split()
+    for w in words:
+      if not w in self._wordcost:
+        self._wordcost[w] = 7
+    self._maxword = 7
+
+    # backstop dict
+    peter_words = open("/Users/alex.rosen/personal/xword/dicts/broda-list-03.2020-trimmed-by-diehl.dict").readlines()
+    for w in peter_words:
+      w = w.split(';')[0].lower()
+      if not w in self._wordcost:
+        self._wordcost[w] = 7
 
   def split(self, s):
     """Uses dynamic programming to infer the location of spaces in a string without spaces."""

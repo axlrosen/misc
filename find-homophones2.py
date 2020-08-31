@@ -1,3 +1,5 @@
+import gzip
+
 import Levenshtein
 
 
@@ -21,3 +23,4 @@ for pron, w in entries.items():
     check(pron, w, entries, "AH.")
     check(pron, w, entries, "AE.")
     check(pron, w, entries, "AA.")
+

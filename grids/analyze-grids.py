@@ -79,7 +79,7 @@ def is_jungle_gym(p):
     # if is_open(p, [4, 6]) or is_open(p, [8, 6]) or is_open(p, [12, 6]) or is_open([p, 16, 6]): return False
     return True
 
-desired_themers = [12, 12, 11, 11, 8, 8]
+desired_themers = [15, 10, 10, 9, 9]
 ordered = False
 find_puzzles(lambda seven_plus, p:
              p.width < 20 and p.height < 20 and
