@@ -1,7 +1,7 @@
 import sys
 
 import puz, os
-from puz_helpers import count_threes, is_open, all_entries
+from puz_helpers import count_threes, is_open, all_entries, print_puzzle
 from itertools import groupby
 from collections import defaultdict, Counter
 
@@ -15,6 +15,12 @@ def load(f):
           length = len(list(g)) 
           if k == '-' and length >= 7:
               themers.append(length)
+    # for x in range(1, p.width-1):
+    #     for y in range(1, p.height-1):
+    #         if not is_open(p, [x-1, y]) and not is_open(p, [x, y-1]) and not is_open(p, [x+1, y+1])\
+    #                 and is_open(p, [x-1, y-1]) and is_open(p, [x, y+1])and is_open(p, [x+1, y])\
+    #                 and is_open(p, [x+1, y-1])and is_open(p, [x-1, y+1]):
+    #             print(f)
     return (themers, p)
 
 def stats(p):
@@ -40,15 +46,9 @@ def find_puzzles(condition):
     for fill, count in counter.most_common():
         fnames = set(fname for (p, fname) in puzzles[fill])
         p, fname = puzzles[fill].pop()
-        print_puzzle(seven_plus, p, fnames, count)
+        print(f"{count} {fnames}  {len(p.clues)} words, {count_threes(p)} threes")
+        print_puzzle(p)
 
-
-def print_puzzle(themers, p, filenames, count):
-    print(f"{count} {filenames}  {len(p.clues)} words, {count_threes(p)} threes")
-    for row in range(p.height):
-        cell = row * p.width
-        print(p.fill[cell:cell + p.width].replace('.', '\u2588').replace('-', '.'), "     ", p.solution[cell:cell + p.width])
-    print
 
 def is_good(p):
     by_length = stats(p)

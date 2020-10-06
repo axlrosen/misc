@@ -1,4 +1,21 @@
 
+def print_puzzle(p):
+    for row in range(p.height):
+        cell = row * p.width
+        print(p.fill[cell:cell + p.width].replace('.', '\u2588').replace('-', '.'), "     ", p.solution[cell:cell + p.width])
+    print
+
+
+def is_rotational(p):
+    for y in range(0, p.height):
+        for x in range(0, 5):
+            xlen = across_length(p, [x, y])
+            if xlen:
+                if across_length(p, [p.width-x-xlen, p.height-y-1]) != xlen:
+                    return False
+                break
+    return True
+
 def x(loc):
     return loc[0]
 
