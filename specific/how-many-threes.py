@@ -48,7 +48,7 @@ def find_puzzles():
 
     print("15x15")
     for n in range(8, 30, 2):
-        print(n, int(counter15[n]/counter15.)
+        print(n, int(counter15[n]/counter15))
     print()
     print("21x21")
     for n in range(10, 40, 2):

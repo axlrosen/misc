@@ -30,6 +30,8 @@ class LanguageModel(object):
     # Build a cost dictionary, assuming Zipf's law and cost = -math.log(probability).
     with gzip.open('/Users/alex.rosen/personal/projects/misc/splitter/wordninja_words.txt.gz') as f:
       words = f.read().decode().split()
+    with open('/Users/alex.rosen/personal/projects/misc/splitter/wordninja_supplement.txt') as f:
+      words.extend(f.read().splitlines())
     self._wordcost = dict((k, log((i+1)*log(len(words)))) for i,k in enumerate(words))
     self._maxword = max(len(x) for x in words)
    
@@ -82,6 +84,7 @@ class LanguageModel(object):
     # Backtrack to recover the minimal-cost string.
     out = []
     i = len(s)
+    total_cost = 0
     while i>0:
       c,k = best_match(i)
       assert c == cost[i]
@@ -97,15 +100,62 @@ class LanguageModel(object):
 
       if new_token:
         out.append(s[i-k:i])
+        total_cost += c
 
       i -= k
 
-    return reversed(out)
+    return reversed(out), total_cost
 
 DEFAULT_LANGUAGE_MODEL = LanguageModel()
 _SPLIT_RE = re.compile("[^a-zA-Z0-9']+")
 
 def split(s):
+  return DEFAULT_LANGUAGE_MODEL.split(s)[0]
+
+def split_with_cost(s):
   return DEFAULT_LANGUAGE_MODEL.split(s)
 
+def phrase(s):
+  phrase, cost = split_with_cost(s)
+  phrase = list(phrase)
+  if cost / len(phrase)**1.5 > 10: return False
+  for index, word in enumerate(phrase):
+    if len(word) == 1 and (word != "i" or index != 0) and word != "a": return False
+  return phrase, cost
 
+def strict_phrase(s):
+  phrase, cost = split_with_cost(s)
+  phrase = list(phrase)
+  if cost / len(phrase)**1.5 > 9: return False
+  for index, word in enumerate(phrase):
+    if len(word) == 1: return False
+  return phrase, cost
+
+def loose_phrase(s):
+  phrase, cost = split_with_cost(s)
+  phrase = list(phrase)
+  if cost / len(phrase)**1.5 > 11.5: return False
+  for index, word in enumerate(phrase):
+    if len(word) == 1 and (word != "i" or index != 0) and word != "a": return False
+  return phrase, cost
+
+#
+# GOOD=["try", "chess","ugly","itsugly","itry","foryouitsok","amaninfull", "treesfallin", "whatisgoingonhere","theresnocryingin","woulditbenicetodo"]
+# BAD=["tyr","cshess","llgy","istulyg","irty","foryositok","ananifull","treselfalin","awefawefawefawef","abababababababa","aaaaaaaaaaaaaaa"]
+#
+# for w in GOOD:
+#   sp, cost = split(w)
+#   print(f"{cost / len(w)**1.5:.1f} ", end="")
+# print()
+# for w in BAD:
+#   sp, cost = split(w)
+#   print(f"{cost / len(w)**1.5:.1f} ", end="")
+#
+# print()
+# for w in GOOD:
+#   sp, cost = split(w)
+#   print(f"{cost / len(list(sp))**1.5:.1f} ", end="")
+# print()
+# for w in BAD:
+#   sp, cost = split(w)
+#   print(f"{cost / len(list(sp))**1.5:.1f} ", end="")
