@@ -110,7 +110,7 @@ DEFAULT_LANGUAGE_MODEL = LanguageModel()
 _SPLIT_RE = re.compile("[^a-zA-Z0-9']+")
 
 def split(s):
-  return DEFAULT_LANGUAGE_MODEL.split(s)[0]
+  return list(DEFAULT_LANGUAGE_MODEL.split(s)[0])
 
 def split_with_cost(s):
   return DEFAULT_LANGUAGE_MODEL.split(s)

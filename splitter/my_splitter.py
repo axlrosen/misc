@@ -1,3 +1,5 @@
+# IIRC my splitter is worse than the ninja one
+
 import gzip, os, re
 import sys
 from math import log
