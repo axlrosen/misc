@@ -85,5 +85,5 @@ def test():
     test_one(entries, bad_entries, phrase, "phrase")
     test_one(entries, bad_entries, strict_phrase, "strict_phrase")
 
-write_pickle()
-test()
+# write_pickle()
+# test()

@@ -30,7 +30,7 @@ for n in ns:
 entries = open("/Users/alex.rosen/personal/xword/combined/combined.txt").readlines()
 # entries = set(open("/Users/alex.rosen/personal/xword/corpora/wikipedia-4a-stripped.txt").readlines())
 
-WORD = "i"
+WORD = "v"
 
 def is_good_phrase(sp_transformed):
     if len(sp_transformed) > 4:
@@ -57,8 +57,8 @@ def is_good_phrase(sp_transformed):
 def move():
     for entry in sorted(list(entries)):
         entry = entry.rstrip()
-        if len(entry) <= 15: continue
-        if len(entry) > 21: continue
+        if len(entry) > 8: continue
+        if len(entry) < 7: continue
         pos = entry.find(WORD)
         if pos < 0: continue
         if entry.find(WORD, pos+1) >= 0: continue
