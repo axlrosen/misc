@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: letter;
+            margin: 0.5in;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10pt;
+        }
+        h1 {
+            text-align: center;
+            font-size: 16pt;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 13pt;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #333;
+            page-break-before: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+            page-break-inside: auto;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #e0e0e0;
+            font-weight: bold;
+        }
+        .date-col {
+            width: 80px;
+            font-weight: bold;
+        }
+        .med-col {
+            width: 140px;
+        }
+        .dose-col {
+            width: auto;
+        }
+        .time-line {
+            border-bottom: 1px solid #000;
+            display: inline-block;
+            min-width: 60px;
+        }
+        .value-line {
+            border-bottom: 1px solid #000;
+            display: inline-block;
+            min-width: 50px;
+        }
+        .note {
+            font-size: 8pt;
+            color: #666;
+            font-style: italic;
+        }
+        tr {
+            page-break-inside: avoid;
+        }
+        .person-section {
+            page-break-before: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Medication Tracker - Week of January 8-14, 2026</h1>
+
+    <div class="person-section">
+        <h2>Mom</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="date-col">Date</th>
+                    <th class="med-col">Medication</th>
+                    <th class="dose-col">Dose 1</th>
+                    <th class="dose-col">Dose 2</th>
+                    <th class="dose-col">Dose 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="date-col">Jan 8<br>(Wed)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 9<br>(Thu)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 10<br>(Fri)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 11<br>(Sat)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 12<br>(Sun)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 13<br>(Mon)</td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 14<br>(Tue)</td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="person-section">
+        <h2>Dad</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="date-col">Date</th>
+                    <th class="med-col">Medication</th>
+                    <th class="dose-col">Dose 1</th>
+                    <th class="dose-col">Dose 2</th>
+                    <th class="dose-col">Dose 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="date-col">Jan 8<br>(Wed)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Doxycycline<br><span class="note">(with full glass of water)</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 9<br>(Thu)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Doxycycline<br><span class="note">(with full glass of water)</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 10<br>(Fri)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Doxycycline<br><span class="note">(with full glass of water)</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 11<br>(Sat)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Doxycycline<br><span class="note">(with full glass of water)</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 12<br>(Sun)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Doxycycline<br><span class="note">(with full glass of water)</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 13<br>(Mon)</td>
+                    <td class="med-col">Doxycycline<br><span class="note">(with full glass of water)</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 14<br>(Tue)</td>
+                    <td class="med-col">Doxycycline<br><span class="note">(with full glass of water)</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="person-section">
+        <h2>Alex</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="date-col">Date</th>
+                    <th class="med-col">Medication</th>
+                    <th class="dose-col">Dose 1</th>
+                    <th class="dose-col">Dose 2</th>
+                    <th class="dose-col">Dose 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="date-col">Jan 8<br>(Wed)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 9<br>(Thu)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 10<br>(Fri)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 11<br>(Sat)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 12<br>(Sun)</td>
+                    <td class="med-col">Oseltamivir</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 13<br>(Mon)</td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td class="date-col">Jan 14<br>(Tue)</td>
+                    <td class="med-col">Tylenol</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="med-col">Temperature</td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Temp: <span class="value-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
