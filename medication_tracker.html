@@ -72,10 +72,13 @@
         .unused {
             background-color: #e8e8e8;
         }
+        .page-break-after {
+            page-break-after: always;
+        }
     </style>
 </head>
 <body>
-    <div class="person-section">
+    <div class="person-section page-break-after">
         <h2>Mom</h2>
         <table>
             <thead>
@@ -225,7 +228,7 @@
         </table>
     </div>
 
-    <div class="person-section">
+    <div class="person-section page-break-after">
         <h2>Dad</h2>
         <table>
             <thead>
@@ -315,7 +318,7 @@
                     <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
                     <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
                 </tr>
-                <tr>
+                <tr class="page-break-after">
                     <td></td>
                     <td class="med-col">Temperature</td>
                     <td>Time: <span class="time-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
